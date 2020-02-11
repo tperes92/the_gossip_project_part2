@@ -1,0 +1,23 @@
+<h2 class="h1 mt-3 mb-4 ml-3 text-center">Renseigne ton gossip ! %></h1>
+<container class="d-flex justify-content-around">
+  <div class="card-deck mb-3 d-flex justify-content-between" style="width: 36rem;">
+      <div class="card mx-4" style="width: 26rem;">
+        <div class="card-body">
+          <h5 class="card-title">Indique le titre de ton gossip et son contenu </h5>
+          <h4 class="card-text mb-4"><small class="text-muted"> 
+            <form action= <%= gossip_path %> method="POST">
+              <input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %> >
+              <input type="text" name="gossip_title">
+              <input type="text" name="gossip_text">
+              <input type="submit" value="Valider">
+          </form></small></h4>
+
+          <%= link_to "See the author's profile", user_path(@gossip.author.id), :class =>"card-link" %>
+        </div>
+      </div>
+    </div>
+    </container>
+  <br>
+  <p class="lead mt-3 mb-4 ml-3 text-center"><%= link_to "Return to the homepage", root_path, :class => "btn btn-primary" %></p>
+
+

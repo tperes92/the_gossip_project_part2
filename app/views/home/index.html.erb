@@ -1,0 +1,25 @@
+<body>
+  <h1 class="h1 text-center mt-3 mb-4 ml-3">Welcome!</h1>
+    <h4 class="h3 text-center mt-3 mb-4 ml-3"> 👉 Whrite your gossips <%= link_to "here", new_path %> </h4>
+    <h4 class="h3 text-center mt-3 mb-4 ml-3"> 👉 Discover the best gossips of The Hacking Project here</h4>
+    <div class="text-center mt-3 mb-4 ml-3">
+    <img src="https://media.giphy.com/media/hQdWtl18ibA58nil8t/giphy.gif" class="img-fluid" alt="Responsive image">
+    </div>
+    <section class="container mt-4 mb-4">
+      <h5 class="text-center mt-4 mb-4">The Gossips are:</h5>
+        <div  class="card-deck mb-3 d-flex justify-content-between">
+          <% @gossips.each.with_index(1) do |gossip, index| %>
+            <div class="col-sm-6 mt-4 mb-4">
+              <div class="card">
+                <div class="card-body d-flex align-items-center flex-column">
+                  <h5 class="card-title"><%= link_to "Gossip n°#{index}", gossip_path(gossip.id) %></h5>
+                  <p class="card-text"><%= gossip.title %></p>
+                  <p class="card-text"><small class="text-muted">Author: <%= gossip.author.first_name %></small></p>
+                  <%= link_to "view the full gossip", gossip_path(gossip.id), :class =>"btn btn-primary" %>
+                </div>
+              </div>
+            </div>
+          <%end %>
+        </div>
+  </section>
+</body>

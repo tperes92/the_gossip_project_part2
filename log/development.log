@@ -3868,3 +3868,104 @@ ActionView::Template::Error (No route matches {:action=>"display", :controller=>
     11:               <input type="text" name="gossip_text">
   
 app/views/gossip/new.html.erb:8:in `_app_views_gossip_new_html_erb__213854345495230937_70343387544020'
+Started GET "/" for ::1 at 2020-02-12 10:04:13 +0100
+  [1m[35m (59.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Thibaultperes/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mGossip Load (64.6ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mUser Load (21.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:17
+  Rendered home/index.html.erb within layouts/application (279.8ms)
+Completed 200 OK in 989ms (Views: 734.3ms | ActiveRecord: 135.7ms)
+
+
+Started GET "/gossip/new" for ::1 at 2020-02-12 10:04:21 +0100
+Processing by GossipController#new as HTML
+  Rendering gossip/new.html.erb within layouts/application
+  Rendered gossip/new.html.erb within layouts/application (23.9ms)
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"display", :controller=>"gossip"}, missing required keys: [:id]):
+     5:         <div class="card-body">
+     6:           <h5 class="card-title">Indique le titre de ton gossip et son contenu </h5>
+     7:           <h4 class="card-text mb-4"><small class="text-muted"> 
+     8:             <form action= <%= gossip_path %> method="POST">
+     9:               <input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %> >
+    10:               <input type="text" name="gossip_title">
+    11:               <input type="text" name="gossip_text">
+  
+app/views/gossip/new.html.erb:8:in `_app_views_gossip_new_html_erb__1608056924364660675_70226016567460'
+Started GET "/gossip/new" for ::1 at 2020-02-12 10:20:10 +0100
+Processing by GossipController#new as HTML
+  Rendering gossip/new.html.erb within layouts/application
+  Rendered gossip/new.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `author' for nil:NilClass):
+    12:               <input type="submit" value="Valider">
+    13:           </form></small></h4>
+    14: 
+    15:           <%= link_to "See the author's profile", user_path(@gossip.author.id), :class =>"card-link" %>
+    16:         </div>
+    17:       </div>
+    18:     </div>
+  
+app/views/gossip/new.html.erb:15:in `_app_views_gossip_new_html_erb__1608056924364660675_70226016051400'
+Started GET "/gossip/new" for ::1 at 2020-02-12 10:20:22 +0100
+Processing by GossipController#new as HTML
+  Rendering gossip/new.html.erb within layouts/application
+  Rendered gossip/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 89ms (Views: 87.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gossip/new" for ::1 at 2020-02-12 10:20:37 +0100
+Processing by GossipController#new as HTML
+  Rendering gossip/new.html.erb within layouts/application
+  Rendered gossip/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+
+
